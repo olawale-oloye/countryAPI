@@ -12,6 +12,8 @@ const Home = () => {
   const regions = ["All", "Africa", "America", "Asia", "Europe", "Oceania"];
 
   const countryByRegion = async (region) => {
+    setAllCountries([]);
+    setRegion(false);
     if (region === "All") {
       getAllCountries();
       return;
@@ -93,7 +95,7 @@ const Home = () => {
             </p>
 
             {region && (
-              <div>
+              <div className="regionDrop absolute bg-white rounded-md w-[100%] border border-black pl-2 shadow-sm">
                 {regions.map((region) => (
                   <p
                     onClick={() => countryByRegion(region)}

@@ -3,6 +3,26 @@
 }
 
 .darkMode {
-  background-color: #202c37;
+  height: 100%;
   color: aliceblue;
+  background-color: #202c37;
+}
+
+.darkMode input,
+.darkMode i,
+.darkMode .regionDrop {
+  color: white;
+}
+
+.darkMode .regionDrop {
+  background-color: #202c37;
+  border: 1px solid white;
+}
+
+input {
+  background: transparent;
+}
+
+body:is(.darkMode) {
+  background: #000;
 }

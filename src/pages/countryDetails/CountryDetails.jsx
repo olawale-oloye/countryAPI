@@ -28,7 +28,7 @@ const CountryDetails = () => {
             onClick={() => nav(`/`)}
             className=" font-semibold pt-2 pb-2 pl-6 pr-6 rounded-lg cursor-pointer border-4"
           >
-            <i class="ri-arrow-left-line pr-2"></i>
+            <i className="ri-arrow-left-line pr-2"></i>
             Back
           </button>
         </div>
@@ -64,9 +64,8 @@ const CountryDetails = () => {
               <div className="pl-5 pr-5">
                 <div className="flex justify-between">
                   Borders:{" "}
-                  {country.borders.map((border) => (
-                    <p>{border}</p>
-                  ))}
+                  {country.borders &&
+                    country.borders.map((border) => <p>{border}</p>)}
                 </div>
               </div>
             </div>
