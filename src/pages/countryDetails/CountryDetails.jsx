@@ -3,9 +3,7 @@ import { useEffect, useState } from "react";
 
 const CountryDetails = () => {
   const { name } = useParams();
-
   const [aCountry, setACountry] = useState();
-
   const nav = useNavigate();
 
   const getCountryDetails = async () => {
@@ -56,7 +54,12 @@ const CountryDetails = () => {
               </div>
               <div className="grid grid-cols-2 pl-5 pr-5 gap-10">
                 <p>Sub Region: {country.subregion}</p>
-                <p className=" float-left">Currencies: {}</p>
+                <p className=" float-left">
+                  Currencies:{" "}
+                  {Object.values(country.currencies)
+                    .map((currency) => currency.name)
+                    .join(", ")}
+                </p>
               </div>
               <div className="pl-5 pr-5">
                 <p>Capital: {country.capital}</p>
