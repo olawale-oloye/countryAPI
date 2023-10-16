@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import CountryCard from "../../components/countryCard/CountryCard";
-import giphy from "../../assets/giphy.gif";
+import giphy from "../../assets/loading.gif";
 
 const Home = () => {
   const [allCountries, setAllCountries] = useState();

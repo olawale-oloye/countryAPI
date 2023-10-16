@@ -14,7 +14,7 @@ const CountryCard = ({ country }) => {
         <img
           src={country.flags.svg}
           alt=""
-          className="  object-cover pb-3 rounded-t-[10px] w-[100%] h-[50%]"
+          className="  object-cover pb-3  rounded-t-[10px] w-[100%] h-[50%]"
         />
         <h1 className="font-semibold px-4">{country.name.common}</h1>
         <h1 className="font-semibold px-4">
